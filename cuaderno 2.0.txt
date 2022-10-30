@@ -1,0 +1,317 @@
+COMPOSICION IN EN LA ELECTRONICA BINARIA
+*Subneting
+	- una ip compuesta por 4 octetos
+
+html es un lenguaje de marcas de hipertextos, etiquetas
+	etiquetas: abiertas, cerradas
+
+existen las "metas" o "meta-etiquetas" que tienen diversas funciones...
+
+Comentar Código:
+HTML: <!-- -->
+CSS: /* */
+JS: //
+
+* HTML *
+ 
+	ETIQUETAS (no son lo mismo que las meta-etiquetas):
+		h1-h6 (titulos)
+		p (párrafo)
+		br (espaciado de párrafos)
+		hr (interlineado)
+		ul (lista no organizada)
+		ol (lista organizada)
+		li (lista)
+		a (para anclar un url)
+		target (abre una ventana nueva redireccionando)
+		sub = subíndice
+		sup = super índice
+		pre = preformateado (sin formato)
+		img = imágenes
+
+	ENTIDADES html:
+	"&"{ampersand} (copy, euro, "vocal"acute, ntilde, #64) 
+		acute=para que funcionen acentos en páginas extranjeras
+		ntilde=hace funcionar la Ñ en paginas extranjeras
+		#64=hace aparecer el @
+	 
+	target ():
+		_blank = abrir en una nueva pestaña
+		_sefl = abre en la pestaña actual
+		_parent = contenido dentro de una frameset
+		_top = contenido en la ventana padre, celdas de distribucion
+
+	Form: estan los metodos GET y POST 
+		<form action="" method="post" enctype="multipart/form-data">
+		<form action="" method="get" enctype="application/x-www-form-urlencoded">
+
+	DOM: ubica elementos atraves del ID
+
+* CSS *
+
+	modificamos diseño en CSS por medio de:
+    	ID (#)
+    	Clase (.clase)
+    	Universal (*)
+    	Objeto (p, h1...)
+    	Grupos (.clase1, .clase2)
+
+	fieldset "mejora la apariencia de los input"
+	select
+
+	Fuentes externas para css fonts.google.com
+
+	win + R (C:\Windows\Fonts\)
+
+	colores mas usados:
+    	tomato
+    	orange
+    	dodgerblue
+    	mediumseagreen
+    	gray
+    	slateblue
+    	violet
+    	lightgray
+
+	+ es mejor descargar las fuentes de letras que importarlas
+
+	SELECTORES DE ATRIBUTOS:
+		comodines de busqueda de siertos elementos o de objetos q tenga sierto parametro (href^="")
+
+
+	clear: both; (limpia toda configuracion predeterminada en CSS)
+
+
+	Pagina responsiva: en CSS 
+	@media screen and (max-width: 800px){
+	    .leftcolumn,
+    	.rightcolumn {
+        	width: 100%;
+        	padding: 0px;
+    	}
+	}
+
+	PADRES (layout):
+	- CONTAINER
+	- ROW
+	- COLUM
+
+ 	Tarjeta
+    	  - header: cabecera
+      	  - body: cuerpo
+      	  - footer: pie del componente
+
+	viñetas:
+    	tipos de viñetas: circle, square, upper-roman, lower-greek (para editar independientemente,
+    	en caso de querer cambiar el estilo de los "li" escribimos "List-style-type")
+    	tambien podemos insertar imágenes como viñetas con el comando 'style="list.style-image:url..."'
+    	en caso de que la imagen esté guardada en el ordenador, escribimos el nombre despues de URL(name.png)
+
+	Videos en CSS:
+	    en una etiqueta despues de (::) se llama pseudoclase
+
+	- bootstrap libreria de CSS limitada.
+
+* JAVASCRIPT *
+
+	Estructura de datos de un objeto
+
+    	Llave (key): Valor (value)
+    	|| = (pipe) or (o) 
+    	&& = and (y)
+    	boolean = true (verdadero) | false (falso)
+	== es equivalente a comparar dos valores
+	=== es equivalente a comparar y a evaluar los tipos
+    	!== equivalente a una negacion o diferencia
+    	> equivale a un valor mayor que
+    	< equivale a un valor menor que
+    	<= equivale a un valor menor o igual que
+    	>= equivale a un valor mayor o igual que
+    	+ = suma
+    	- = resta
+    	* = multiplicacion
+    	/ = division
+
+	CONDICIONALES:
+	
+		IF 
+		if (condicion){
+		bloque de código a ejecutar si la condición es verdadera
+			}
+		
+		SWITCH
+			switch(expresion) {
+  				case x:
+    				bloque de codigo
+    			break;
+  				case y:
+    				bloque de codigo
+    			break;
+  				default:
+    				bloque de codigo
+				}
+
+		TERNARIA: sirve para recortar las condicionales q tienen solo dos opciones de respuesta
+			const expresion = (grupo) => {
+      			return grupo ? "opcion 1" : "opcion 2";
+    			};
+
+	un watcher (addEventListener) "vigilante"
+
+		Funciones y Variables
+
+			- las funciones llevan () y  las variables []
+    		- Arreglo = Arrays
+			- para imprimir arreglos usar []
+    		
+			variable comun: tipo string
+    		const saludo = "Hola" + "Alex";
+
+		    variable de tipo array, vacia
+    		const arreglo = [];
+
+    		Variable de tipo array lleno
+    		la indexacion no es otra cosa que indices que indican el orden de las cosas empezando desde (0)
+    			const semana = [
+      			"lunes",
+      			"martes",
+      			"miercoles",
+      			"jueves",
+      			"viernes",
+      			"sabado",
+      			"domingo",
+    			];
+
+    		* la longitud del arreglo es 7
+    		  indices 0-6
+    		* lenght = muestra cuantos elementos tiene
+
+    		Sin Desestructurar
+    			const primerdia = semana[0];
+    			const segundodia = semana[1];
+    			console.log(primerdia, ",", segundodia);
+
+    		Con Desestructuracion
+    			const [diauno, diados, diatres, diacuatro, diacinco, diaseis, diasiete] =
+      			semana;
+    			console.log(diauno);
+
+			Crear nueva instacia en una clase
+				clase.push();
+
+			Variables de tipo array de lectura y escritura
+    			let meses = [];
+
+			Funciones de tipo constructor y estático:
+				
+			- funcion tipo constructor
+
+				class Calculadora {
+    			el objeto constructor se encarga de crear las variables globales que se utilizaran dentro de la clase y sus funciones internas
+    			this haces referencia a elementos que forman parte del objeto principal
+    			ejemplo this.num1 es una variable global de calculadora, mientras que num1 es un parametro
+    			
+    			// puede ser considerado un método
+    			constructor (num1, num2){
+	        		this.num1 = num1;
+        			this.num2 = num2;
+    			}
+    
+    			suma = () => {
+        			return (this.num1 + this.num2);
+    			}
+    			multiplicar = () => {
+	        		return (this.num1 * this.num2);
+    			}
+
+    		- funcion de objeto estatico, es libre del constructor
+    			static cInt = () => {
+	        		return parseInt (num1);
+    				}
+
+				}
+
+* ECMAScript 6 *
+
+		webpackjs.js.org 
+		babeljs.io
+
+		Creacion
+		- archivo package.json con un objeto vacio
+		- en la terminal ejecutar "npm install --save-dev @babel/core @babel/cli @babel/preset-env"
+		- creamos un "scripts" con la sintaxis 
+    		"build": "build ./src -d (nombre de carpeta a eleccion)",
+		- crear archivo babel.config.json y rellenar con 
+    		"{
+    		"presets": ["@babel/preset-env"]
+    		}"
+		- crear carpeta src con archivos .js e index.html
+		- todos los archivos .js a exportar, al inicio de cada clase escribirles "export"
+		- dentro de la carpeta src creamos un archivo llamad "app.js" alli se llamaran los demas archivos js con la etiqueta "import"
+		- creamos un archivo general llamado webpack.config.js con la siguiente estructura:
+    		Invoca el modulo path de NodeJS, que se encuentra en el directorio node_modules
+    		const path = require('path');
+
+    	Exportar la configuración del Módulo
+    	Webpack Funcione con Babel, debo agregar la configuración del módulo de babel y su regla
+
+    			const path = require('path');
+
+			module.exports = {
+        		entry: './src/app.js',
+        		output: {
+            		filename: 'bundle.js',
+            		path: path.join(__dirname, 'dist'),
+        		},
+        		mode: "production",
+        		module: {
+            		rules: [
+                		{
+                    		test: /\.m?js$/,
+                    		exclude: /node_modules/,
+                    		use: {
+                        		loader: "babel-loader",
+                        		options: {
+                            		presets: ['@babel/preset-env']
+                        		}
+                    		}
+                		}
+            		]
+        		}
+    		}; 
+
+		- en el archivo package.json añadimos en el "scripts" el siguiente build:
+    		"build": "webpack"
+		- por ultimo en consola escribimos: npm install --save-dev babel-loader    
+		- ya con todo eso creado podemos probar en la terminal si salta algun error con el comando npm run (nombre carpeta elegida)
+
+
+		clase webpack: npm (noud package modules)
+		npm i --save-dev @babel/cli @babel/core @babel/preset-env babel-loader css-loader style-loader webpack webpack-cli @fortawesome/fontawesome-free bootstrap
+		npm i @fortawesome/fontawesome-free bootsrap
+
+
+		bot.addEventListener(evento, () => { eval(action); }); //eval elimina las comillas en alert del js
+
+		//programacion orientada a objetos
+		
+	* Desviacion de cierre \'  \'
+	* append = adicionar despues de 
+	* prepend = adicionar antes de
+	* "top 1.5s ease-in" = ingresa suavemente desde arriba
+	* '' = template string
+ 
+cuando terminamos en return es porques un elemento padre
+cuando terminamos en document.getElementById es porque es un objeto hijo
+
+
+
+
+
+map es un iterador
+los objetos dentro de un objeto se le llama métodos
+
+un constructor no se puede agrupar con un elemento estático
+
+return se puede convertir en string
+
