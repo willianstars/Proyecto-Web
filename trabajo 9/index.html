@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    let yo = {
+        Nombre : "Willian",
+        Apellidos : "Garcia Rubio",
+        Edad : 18,
+        Estatura : 1.72, // este es un dato float (coma flotante)
+        Nacionalidad : "Colombia",
+        Dia_de_nacimiento : 31,
+        Mes_de_nacimiento : 10,
+        Año_de_nacimiento : 2003,
+        Tipo_de_identificacion : "C.C",
+        Laborando : true,
+        Salario : 1
+    }
+
+     if (yo.Edad >= 18) {
+         console.log ("Es mayor de edad");
+     } else {
+         console.log ("Es menor de edad");
+     }
+     if (yo.Estatura >= 1.65 ) {
+         console.log ("Es una persona alta");
+     } else {
+         console.log ("Es persona Promedio");
+     }
+
+     switch(yo.Tipo_de_identificacion){
+        case "T.I":
+            console.log("Tarjeta de identidad");
+            break;
+        case "C.C":
+            console.log("Cédula de Ciudadanía");
+            break;
+     }
+     switch(yo.Nacionalidad){
+         case "Colombia":
+             console.log("Colombiano");
+             break; 
+         case "Otro pais":
+             console.log("Extranjero")
+     }
+
+     const sueldo = yo.Salario ? 'Gana un poco mas del minimo' : 'Gana un minimo'
+     const trabajo = yo.Laborando ? 'Actualmente cuenta con empleo' : 'Actualmente desempleado'
+
+     console.log(trabajo);
+     console.log(sueldo);
+
+
+    const suma = (a, b) => {
+        return a + b;
+    }
+    
+    const resta = (a, b) =>{
+        return a - b;
+    }
+
+    const div = (a, b) => {
+        return a / b;
+    }
+
+    const mult = (a, b) => {
+            return a * b;
+    }
+
+
+    document.writeln(resta(mult(div(suma(35, 25),2),3),3));
+
+</script>
+<body>
+</body>
+</html>

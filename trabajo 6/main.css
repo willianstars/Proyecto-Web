@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'font1';
+    src: url(/clases/clase_css/css/Fonts/EduTASBeginner.ttf);
+}
+@font-face {
+    font-family: 'font2';
+    src: url(/clases/clase_css/css/Fonts/Fascinate.ttf);
+}
+@font-face {
+    font-family: 'font3';
+    src: url(/clases/clase_css/css/Fonts/Lobster-Regular.ttf);
+}
+body {
+    color: #fff;
+    clear: both;
+}
+
+.circulo1 {
+    background-color: rgb(0, 121, 158);
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    position: absolute;
+}
+.circulo1:hover {
+    box-shadow: 20px -20px 4px darkblue, 0px 0px 10px #f00;
+    text-shadow: -2px 2px 1px darkblue, 2px -2px 1px orange;
+}
+
+/* .circulo2 {
+    background-color: darkblue;
+    border-radius: 360px;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    display: flex;
+    margin-left: 250px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -1px;
+    justify-content: center;
+    line-height: 100px;
+    font-size: 15px;
+} */
+
+.circulo2{
+    background-color: darkblue;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 250px;
+}
+
+.circulo2:hover {
+    box-shadow: 20px 20px 2px darkmagenta, inset 0px 0px 5px 5px rgb(0, 121, 158);
+    font-family: 'font1';
+}
+
+/* .circulo3 {
+    background-color: darkmagenta;
+    border-radius: 360px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 15px; 
+} */
+
+.circulo3{
+    background-color: darkmagenta ;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 50px;
+    width: 180px;
+    height: 180px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.circulo3:hover {
+    box-shadow: 20px 20px 4px orangered, -20px -20px 4px orangered;
+    font-family: 'font2';
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: cornflowerblue;
+}
+
+/* .circulo4 {
+    background-color: orangered;
+    border-radius: 360px;
+    width: 200px;
+    height: 200px;
+    margin-left: 300px;
+    margin-top: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 15px;
+} */
+
+.circulo4{
+    background-color: orangered ;
+    border-radius: 50%;
+    margin-top: 100px;
+    margin-left: 300px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.circulo4:hover {
+    box-shadow: 40px 30px 0px rgb(0, 121, 158), -40px 30px 0px darkmagenta, 0px -40px 0px darkblue;
+    text-shadow: 1px 1px 10px #000;
+    font-family: 'font3';
+} 

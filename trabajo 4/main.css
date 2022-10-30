@@ -1,0 +1,482 @@
+body{
+    --negro: #000;
+    --blanco: #fff;
+}
+
+.tablero {
+    background-color: var(--blanco);
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border: 2px solid #123;
+    left: 30%;
+    top: 10%;
+    box-shadow: rgb(0, 0, 0) 15px 15px 20px;
+}
+
+div{
+    padding: 0px;
+}
+
+div[class~="col2"]{
+    left: 100px;
+}
+div[class~="col3"]{
+    left: 200px;
+}
+div[class~="col4"]{
+    left: 300px ;
+}
+div[class~="col5"]{
+    left: 400px ;
+}
+div[class~="col6"]{
+    left: 500px ;
+}
+div[class~="col7"]{
+    left: 600px ;
+}
+div[class~="col8"]{
+    left: 700px;
+}
+
+div[class~="col1"]:hover {
+    background-color: #666 !important;
+}
+div[class~="col2"]:hover {
+    background-color: #666 !important;
+}
+div[class~="col3"]:hover {
+    background-color: #666 !important;
+}
+div[class~="col4"]:hover {
+    background-color: #666 !important;
+}
+div[class~="col5"]:hover {
+    background-color: #666 !important;
+}
+div[class~="col6"]:hover {
+    background-color: #666 !important;
+}
+div[class~="col7"]:hover {
+    background-color: #666 !important;
+}
+div[class~="col8"]:hover {
+    background-color: #666 !important;
+}
+
+div[class~="row1"]{
+    margin-top: 99px !important;
+}
+div[class~="row2"]{
+    margin-top: 200px;
+}
+div[class~="row3"]{
+    margin-top: 300px;
+    /*padding-top: 0px !important;*/
+}
+div[class~="row4"]{
+    margin-top: 400px;
+}
+div[class~="row5"]{
+    margin-top: 500px;
+}
+div[class~="row6"]{
+    margin-top: 600px;
+}
+div[class~="row7"]{
+    margin-top: 700px;
+}
+
+.tablero .row .col1{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col1{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col1{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col1{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col1{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col1{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col1{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col1{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.tablero .row .col2{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col2{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col2{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col2{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col2{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col2{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col2{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col2{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.tablero .row .col3{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col3{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col3{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col3{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col3{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col3{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col3{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col3{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+
+.tablero .row .col4{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col4{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col4{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col4{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col4{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col4{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col4{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col4{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.tablero .row .col5{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col5{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col5{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col5{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col5{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col5{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col5{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col5{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.tablero .row .col6{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col6{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col6{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col6{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col6{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col6{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col6{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col6{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.tablero .row .col7{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col7{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col7{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col7{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col7{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col7{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col7{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col7{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.tablero .row .col8{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row1 .col8{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row2 .col8{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row3 .col8{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row4 .col8{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row5 .col8{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row6 .col8{
+    background-color: var(--blanco);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.tablero .row7 .col8{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}

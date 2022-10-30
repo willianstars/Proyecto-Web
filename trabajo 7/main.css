@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+/* * {
+    font-family: "Poppins", sans-serif;
+} */
+
+body {
+    /* background-color: #666; */
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+    position: absolute !important;
+    /* background-color: #fff; */
+}
+.container{
+    position: relative;
+    z-index: 3;
+    margin-top: -500px;
+}
+
+.float-start{
+    color: deepskyblue;
+}
+.float-end{
+    color: white;
+}
+.container .card .card-body .cuadros{
+    display: flex;
+    z-index: 1;
+    position: relative;
+}
+
+.container .card .card-body .text-uppercase .float-end .fas{
+    z-index: 6; 
+    position: relative;
+}
+.cuadro1{
+    width: 1000px;
+    height: 1000px;
+    background-color: rgb(243, 241, 241);
+    transform: rotate(45deg);
+    border-radius: 100px;
+    position: absolute;
+}
+.cuadro2{
+    width: 1000px;
+    height: 1000px;
+    background-color: deepskyblue;
+    transform: rotate(25deg);
+    border-radius: 120px;
+    margin-left: 250px;
+    position: relative;
+}
+
+.icons{
+    margin-top: 150px;
+    margin-bottom: 100px;
+    color:white;
+}
+
+.form-control{
+    border-radius: 0px;
+}
+ .btn{
+     border-radius: 0px;
+ }
+ .container-fluid .card .card-body .cuadros{
+     position: relative;
+     z-index: 2;
+ }
+ .cuadros{
+    margin-left: 65%;
+ }
+ h1{
+     position: relative;
+     z-index: 5;
+ }

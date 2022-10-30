@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const vehiculos = [
+        {
+          "marca": "Audi",
+          "modelo": "R8 Coupé",
+          "color": "Negro",
+          "patente": "AWDS34",
+        },
+        {
+          "marca": "Audi",
+          "modelo": "Q3 Sportback",
+          "color": "Negro",
+          "patente": "ASDW25",
+        },
+        {
+          "marca": "Audi",
+          "modelo": "A5 Coupé",
+          "color": "Verde Esmeralda Perlado",
+          "patente": "ADWS15",
+        },
+        {
+          "marca": "Audi",
+          "modelo": "A5 Cabrio",
+          "color": "Negro Perlado",
+          "patente": "DWSA68",
+        },
+        {
+          "marca": "Audi",
+          "modelo": "A3 Sedán",
+          "color": "Turquesa Perlado",
+          "patente": "SDWA58",
+        },
+
+        {
+          "marca": "Mercedes Benz",
+          "modelo": "CLS Coupé",
+          "color": "Blanco perlado",
+          "patente": "SDKI54",
+        },
+        {
+          "marca": "Mercedes Benz",
+          "modelo": "GLE SUV",
+          "color": "Azul Marino",
+          "patente": "NAXY31",
+        },
+        {
+          "marca": "Mercedez Benz",
+          "modelo": "SL Roadster",
+          "color": "Amarillo",
+          "patente": "HGFD21",
+        },
+        {
+          "marca": "Mercedes Benz",
+          "modelo": "B Sport Tourer",
+          "color": "Gris Plata",
+          "patente": "SVDA45",
+        },
+        {
+          "marca": "Mercedes Benz",
+          "modelo": "AMG GT Coupé",
+          "color": "Negro Cromado",
+          "patente": "TRSD54",
+        },
+
+        {
+          "marca": "Subaru",
+          "modelo": "XV",
+          "color": "Verde Goodwood",
+          "patente": "CVJH20",
+        },
+        {
+          "marca": "Subaru",
+          "modelo": "WRX Sedan",
+          "color": "Azul Ascari",
+          "patente": "FTGD54",
+        },
+        {
+          "marca": "Subaru",
+          "modelo": "Evoltis",
+          "color": "Negro Vantablack",
+          "patente": "HGDD58",
+        },
+        {
+          "marca": "Subaru",
+          "modelo": "Impreza Sedan",
+          "color": "Verde Mamba",
+          "patente": "TSDN12",
+        },
+        {
+          "marca": "Subaru",
+          "modelo": "Forester Híbrido",
+          "color": "Naranja Valencia",
+          "patente": "LKHF23",
+        },
+
+        {
+          "marca": "BMW",
+          "modelo": "i3",
+          "color": "Vinotinto",
+          "patente": "ZXCV65",
+        },
+        {
+          "marca": "BMW",
+          "modelo": "x3 xDrive30e",
+          "color": "Plomo",
+          "patente": "MVNB45",
+        },
+        {
+          "marca": "BMW",
+          "modelo": "Serie 1 128ti",
+          "color": "Beige",
+          "patente": "LKJH32",
+        },
+        {
+          "marca": "BMW",
+          "modelo": "Z4 Roadster",
+          "color": "Rojo Metalizado",
+          "patente": "DFGH51",
+        },
+        {
+          "marca": "BMW",
+          "modelo": "M4 Convertible",
+          "color": "Azul Marino",
+          "patente": "EFBG15",
+        },
+
+        {
+          "marca": "Ford",
+          "modelo": "New F-150",
+          "color": "Azul petróleo",
+          "patente": "CDWS30",
+        },
+        {
+          "marca": "Ford",
+          "modelo": "Ranger",
+          "color": "Azul Perlado",
+          "patente": "MLKJ63",
+        },
+        {
+          "marca": "Ford",
+          "modelo": "Maverick",
+          "color": "Gris",
+          "patente": "CBNZ47",
+        },
+        {
+          "marca": "Ford",
+          "modelo": "Mustang GT Premium AT",
+          "color": "Rojo Anaranjado",
+          "patente": "UTFD18",
+        },
+        {
+          "marca": "Ford",
+          "modelo": "Explorer XLT Ecoboost 2.3l RWD",
+          "color": "Gris Perla",
+          "patente": "ALIC96",
+        },
+      ];
+      const [Audi, Mercedez, BMW, Ford, Subaru] = vehiculos;
+      const [car1, car2, car3, car4, car5, car6 ] = vehiculos;
+      const ingreso = prompt("Ingrece el indice: ");
+      console.log(Audi);
+      document.writeln('Vehiculo => Marca: ' + vehiculos[ingreso].marca + ', Modelo: ' + vehiculos[ingreso].modelo + ', Color: ' + vehiculos[ingreso].color + ', Patente: ' + vehiculos[ingreso].patente);
+    </script>
+    
+  </body>
+</html>

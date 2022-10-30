@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=di, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <table class="w-25 border" cellpadding="5">
+            <tbody class="w-100">
+                <tr class="w-100">
+                    <td colspan="4" class="w-100">
+                        <input type="number" id="pantallax" value="0" class="btn btn-ligth w-90 text right" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(7,'pantallax');">7</button></td>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(8,'pantallax');">8</button></td>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(9,'pantallax');">9</button></td>
+                    <td><button class="btn btn-succes text-center w-100" id="equis" onclick="operadores('*','pantallax');">x</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(4,'pantallax');">4</button></td>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(5,'pantallax');">5</button></td>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(6,'pantallax');">6</button></td>
+                    <td><button class="btn btn-succes text-center w-100" id="menos" onclick="operadores('-','pantallax');">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(1,'pantallax');">1</button></td>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(2,'pantallax');">2</button></td>
+                    <td><button class="btn btn-info text-center w-100" id="num" onclick="numbers(3,'pantallax');">3</button></td>
+                    <td><button class="btn btn-succes text-center w-100" id="mas" onclick="operadores('+','pantallax');">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-dark text-center w-100" id="clear" onclick="clearing('pantallax');">C</button></td>
+                    <td><button class="btn btn-info text-center w-100" id="num0" onclick="numbers(0,'pantallax');">0</button></td>
+                    <td><button class="btn btn-ligth text-center w-100" id="equal" onclick="igual('pantallax');">=</button></td>
+                    <td><button class="btn btn-succes text-center w-100" id="div" onclick="operadores('/','pantallax');">/</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
