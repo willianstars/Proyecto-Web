@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  
+  <body>
+    <script>
+      // Objeto literales
+  
+      // uno a uno
+      // const persona = {
+      //    altura: 1.80,
+      //    peso: 76,
+      //    edad: 39,
+      //    rh: "A+",
+      //    eps: "colmedica",
+      // };
+  
+  
+      // uno a muchos
+      const personas = [
+        {
+          "altura": 1.78,
+          "peso": 72,
+          "edad": 45,
+          "rh": "A+",
+          "eps": "Nueva Eps",
+        },
+        {
+          "altura": 1.60,
+          "peso": 68,
+          "edad": 32,
+          "rh": "O+",
+          "eps": "Nueva Eps",
+        },
+        {
+          "altura": 1.70,
+          "peso": 70,
+          "edad": 40,
+          "rh": "O+",
+          "eps": "Nueva Eps",
+        },
+      ];
+  
+      //personas.push(persona);
+      //console.log(persona);
+      //console.log(personas[3].edad);
+  
+      /* hacer un diccionario de datos de lo que quieran (minimo 25 registros)*/
+      const ingreso = prompt("Ingrese el indice; ");
+      console.log('Resultado: Altura: ' + personas[ingreso].altura + ', Peso: ' + personas[ingreso].peso + ', Edad: ' + personas[ingreso].edad + ', RH: ' + personas[ingreso].rh + ', EPS: ' + personas[ingreso].eps);
+        
+    </script>
+  </body>
+</html>

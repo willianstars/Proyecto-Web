@@ -1,0 +1,131 @@
+/*todas las cajas estaran separadas de las otras cas¡jas*/
+* {
+    box-sizing: border-box;
+} 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color: #f1f1f1;
+    text-decoration: none !important;
+}
+div{
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 230px;
+    padding-top: 30px;
+    background: linear-gradient(rgba(102, 7, 102, 1), rgb(0, 89, 255)); 
+    color: #ddd;
+}
+.header h1 {
+    font-size: 50px;
+    font: bold;
+}
+.header p {
+    font-size: 20px;
+    font: bold;
+}
+
+.topnav {
+    margin-top: 10px;
+    background-color: #333;
+    z-index: 2;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(135deg, rgb(0, 60, 160) 5%,rgb(0, 60, 160) 6%,cornflowerblue 6% , cornflowerblue 7% ); 
+}
+.topnav a { 
+    float: left; 
+    display: block;
+    color: #f00;
+    z-index: 1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    opacity: 70%;
+    font-weight: bold;
+
+}
+.topnav a:hover {
+    color: #f00;
+    font-weight: bold;
+    opacity: 100%;
+    z-index: 3;
+    background-image: repeating-linear-gradient(135deg, rgba(0, 60, 160, 1) 20px,rgba(0, 60, 160, 1) 35px, cornflowerblue 35px,cornflowerblue 45px); 
+}
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.row .leftcolumn .card .img {
+    background-image: url("https://actioncoach.com.mx/mariainesmoran/wp-content/uploads/sites/3/2016/02/amazing-business-ideas.jpg");
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    border-radius: 5px;
+} 
+.row .leftcolumn .card .abc{
+    background-image: url("https://thumbs.dreamstime.com/z/ingeniero-de-software-aislado-en-fondo-blanco-concepto-programador-inform%C3%A1tico-el-trabajo-desarrollador-servicios-web-analista-187081920.jpg");
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    background-size: cover; 
+    border-radius: 5px;
+}
+.row .rightcolumn .card .img{
+    background-image: url("https://www.escudodigital.com/uploads/s1/11/26/83/pinguino-de-linux-1.jpeg");
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; 
+    border-radius: 5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
+    margin-top: 20px;
+    color: #ddd;
+    background-image: linear-gradient(rgba(102, 7, 102, 1), rgb(0, 89, 255));
+}
+@media screen and (max-width: 450px) {
+
+    .header, .topnav, .rightcolumn, .leftcolumn {
+        width: 350px;
+        
+    }
+}
+
+.row .rightcolumn .card .enlace {
+    padding: 0px;
+    margin-left: 30px;
+    font-weight: bold;
+} 
+
+a:link{
+    text-decoration: none;
+}

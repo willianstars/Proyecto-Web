@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    /* Estructura de datos de un objeto
+     Llave (key): Valor (value)
+     || = (pipe) or (o) 
+     && = and (y)
+     boolean = true (verdadero) | false (falso)
+     == es equivalente a comparar dos valores
+     === es equivalente a comparar y a evaluar los tipos
+     !== equivalente a una negacion o diferencia
+     > equivale a un valor mayor que
+     < equivale a un valor menor que
+     <= equivale a un valor menor o igual que
+     >= equivale a un valor mayor o igual que
+     + = suma
+     - = resta
+     * = multiplicacion
+     / = division
+  */
+    let estudiante = {
+      nombres: "Julian Andres",
+      Apellidos: "Rodriguez Garzón",
+      identificación: 1073598343,
+      Activo: true,
+      Sexo: 0,
+    };
+
+    //condicional IF
+    if (estudiante.Sexo >= 1) {
+      console.log("El sexo del estudiante es femenino");
+    } else {
+      console.log("El sexo del estudiante es masculino");
+    }
+
+    //condicional switch
+    // para evaluar objetos a precision
+    switch (estudiante.Activo) {
+      case true:
+        console.log("Usuario activo");
+        break;
+      case false:
+        console.log("Usuario inactivo");
+        break;
+    }
+
+    const edad = 35;
+    switch (edad){
+        case 10:
+            console.log('Tienes 10 años');
+            break;  
+        case 20:
+            console.log('Tiene 20 años');
+            break;
+        case 30:
+            console.log('Tiene 30 años');
+            break;
+        default:
+            console.log('Tiene una edad diferente')
+    }
+
+    const tipodoc = 1;
+    switch (tipodoc){
+        case 1:
+            console.log('T.I');
+            break;  
+        case 2:
+            console.log('CC');
+            break;
+        case 3:
+            console.log('CE');
+            break;
+        default:
+            console.log('PA');
+            break;
+    }
+
+    
+
+    //condicional TERNARIA
+    const isSexo = (sexo) => {
+      return sexo ? "Femenino" : "Masculino";
+    };
+
+    const fixDate = (data) => {
+      return data < 10 ? "0" + data : data;
+    };
+
+    const fecha = new Date();
+    let hrs = 0,
+      min = 0,
+      sec = 0;
+
+    hrs = fixDate(fecha.getHours());
+    min = fixDate(fecha.getMinutes());
+    sec = fixDate(fecha.getSeconds());
+
+    console.log(hrs + ":" + min + ":" + sec);
+
+    // sirve para recortar las condicionales q tienen solo dos opciones de respuesta
+    const sexus = estudiante.Sexo ? " Femenino" : "Masculino";
+
+    //console.log(sexus);
+
+    
+  </script>
+  <body></body>
+</html>

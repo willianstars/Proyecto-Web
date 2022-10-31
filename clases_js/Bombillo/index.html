@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bombilla {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="bombilla1"
+      src="/clases/clase_css/css/img/pic_bulboff.gif"
+      class="bombilla"
+      alt="bombilla con javascript"
+    />
+    <img
+      id="bombilla2"
+      src="/clases/clase_css/css/img/pic_bulbon.gif"
+      class="bombilla"
+      alt="bombilla con javascript"
+    />
+
+    <br />
+    <button onclick="prender()">Prender</button>  
+    <button onclick="apagar()">Apagar</button>
+    <script>
+            let bombilla1 = document.getElementById("bombilla1");
+            let bombilla2 = document.getElementById("bombilla2");
+
+            function prender() {
+              bombilla1.src = "/clases/clase_css/css/img/pic_bulbon.gif";
+              bombilla2.src = "/clases/clase_css/css/img/pic_bulboff.gif";
+              bombilla1.alt = "Bombilla 1 Prendida";
+              bombilla2.alt = "Bombilla 2 Apagada";
+            }
+
+            function apagar() {
+              bombilla1.src = "/clases/clase_css/css/img/pic_bulboff.gif";
+              bombilla2.src = "/clases/clase_css/css/img/pic_bulbon.gif";
+              bombilla1.alt = "Bombilla 1 Apagada";
+              bombilla2.alt = "Bombilla 2 Prendida";
+            }
+
+            function Intermitencia (numero_bombilla) {
+              let bnb = "bombilla" + numero_bombilla;
+              if (bnb.src == "http://127.0.0.1:5500//clases/clase_css/css/img/pic_bulboff.gif"){
+                  bnb.src = "/clases/clase_css/css/img//clases/clase_css/css/img/pic_bulbon.gif";
+              } else {
+                  bnb.src = "/clases/clase_css/css/img//clases/clase_css/css/img/pic_bulboff.gif";
+              }
+            }
+
+            setInterval(Intermitencia(1), 1000);
+    </script>
+  </body>
+</html>

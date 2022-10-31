@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="fecha" />
+    <button id="lanzar" onclick="">Lanzar Fecha</button>
+    <script>
+      const fixDate = (data) => (data < 10 ? "0" + data : data);
+
+      // un watcher (addEventListener)
+      document.getElementById("lanzar").addEventListener("click", () => {
+        let fecha = new Date();
+        let hrs = fixDate(fecha.getHours()),
+          min = fixDate(fecha.getMinutes()),
+          sec = fixDate(fecha.getSeconds());
+        document.getElementById("fecha").value = hrs + ":" + min + ":" + sec;
+      });
+    </script>
+  </body>
+</html>

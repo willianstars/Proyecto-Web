@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script>
+    // las funciones llevan () y  las variables []
+    // Arreglo = Arrays
+    //variable comun: tipo string
+    const saludo = "Hola" + "Alex";
+
+    //variable de tipo array, vacia
+    const arreglo = [];
+
+    //variable de tipo array lleno
+    // la indexacion no es otra cosa que indices que indican el orden de las cosas empezando desde (0)
+    const semana = [
+      "lunes",
+      "martes",
+      "miercoles",
+      "jueves",
+      "viernes",
+      "sabado",
+      "domingo",
+    ];
+
+    //la longitud del arreglo es 7
+    //indices 0-6
+
+    // sin desestructurar
+    const primerdia = semana[0];
+    const segundodia = semana[1];
+    //console.log(primerdia, ",", segundodia);
+
+    //con desestructuracion
+    const [diauno, diados, diatres, diacuatro, diacinco, diaseis, diasiete] =
+      semana;
+    //console.log(diauno);
+
+    //crear nueva instancia de la clase date u hora
+    setInterval (() => {
+      const fecha = new Date();
+    let datosFecha = [];
+    datosFecha.push(fecha.getDay());
+    datosFecha.push(fecha.getMonth() + 1);
+    datosFecha.push(fecha.getFullYear());
+    datosFecha.push(fecha.getHours());
+    datosFecha.push(fecha.getMinutes());
+    datosFecha.push(fecha.getSeconds());
+
+    const [dia, mes, anno, hora, minutos, segundos] = datosFecha;
+
+    //console.log(dia + "/" + mes + "/" + anno);
+
+    const fixDate = (willian) => {
+      if (willian < 10) {
+        return "0" + willian;
+      } else {
+        return willian;
+      }
+    };
+
+    console.log(
+      fixDate(dia) +
+        "/" +
+        fixDate(mes) +
+        "/" +
+        anno +
+        " " +
+        fixDate(hora) +
+        ":" +
+        fixDate(minutos) +
+        ":" +
+        fixDate(segundos)
+    );
+    }, 1000);
+    
+
+    const frutas = [
+      "banano",
+      "guayaba",
+      "fresa",
+      "pera",
+      "manzana",
+      "feijoa",
+      "mora",
+      "mango",
+      "papaya",
+      "membrillo",
+    ];
+
+    const alumnos = [
+      "Nilson",
+      "Willian",
+      "Yeison",
+      "alex",
+      "liliana",
+      "pedro",
+      "juan",
+    ];
+
+    // variables de tipo array de lectura y escritura
+    let meses = [];
+
+    meses.push("Enero", "febrero", "marzo");
+    const sinEnero = meses.slice(3);
+
+    const sinFrutas = frutas.slice(-1);
+
+    // !== es similar a el signo (-)
+    const sinAlex = alumnos.filter((valor, posicion) => {
+      return posicion !== 3;
+    });
+
+    // para imprimir arreglos usar []
+    //document.writeln(fixDate);
+  </script>
+
+  <body>
+    <br />
+    <!-- ARRAYS, Expresiones y Operadores -->
+  </body>
+</html>

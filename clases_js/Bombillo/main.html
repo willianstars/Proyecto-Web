@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+    html {
+      background-image: linear-gradient(#fff, #777, #000);
+      overflow: hidden;
+    }
+
+    html,
+    body {
+      padding: 0px;
+      margin: 0px;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .bombillo {
+      margin: auto;
+      width: 100px;
+      height: 200px;
+    }
+    .bombillo .cristal {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #666;
+      border-radius: 360px;
+      box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.3);
+      background-color: #666;
+    }
+    .bombillo .base {
+      position: relative;
+      left: 20px;
+      top: -10px;
+      width: 60px;
+      height: 60px;
+      background: repeating-linear-gradient(
+        0deg,
+        #89a 20%,
+        #fefefe 30%,
+        #89a 40%
+      );
+      border-radius: 0px 0px 50px 50px;
+    }
+    .monitor {
+      width: 100%;
+      text-align: center;
+    }
+    button {
+      box-shadow: 0px 0px 10px #123;
+      padding: 10px;
+      background: linear-gradient(#789, #123);
+      color: #fff;
+      border: 2px solid #123;
+      border-radius: 5px;
+      width: 150px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    button:hover {
+      background: linear-gradient(#123, #789);
+    }
+    .caja {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+    }
+    #title {
+      width: 100vw;
+      font-size: 42px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 100px;
+      font-weight: bold;
+      text-shadow: 0px -5px 20px #000;
+    }
+    input[type="text"] {
+      text-align: center;
+      border: 0px solid #000;
+      padding: 4px;
+      box-shadow: 0px 0px 4px #345;
+      border-radius: 5px;
+    }
+    span {
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div class="caja">
+      <div id="title">Bombillo RGB con JavaScript</div>
+
+      <div class="bombillo">
+        <div class="cristal"></div>
+        <div class="base"></div>
+      </div>
+      <div class="monitor">
+        <button id="boton" onclick="cambioluz()">Encender</button>
+        <br /><br />
+        <span>Color RGB</span>
+        <input type="text" name="printcolor" id="printcolor" readonly />
+      </div>
+    </div>
+    <script>
+
+      // variables globales
+      let cristal = document.getElementsByClassName("cristal");
+      let boton = document.getElementById("boton");
+      let printcolor = document.getElementById("printcolor");
+      let intervalo;
+
+      // funciones
+      const colorRGB = () => {
+        const red = Math.floor(Math.random() * 255 + 1);
+        const green = Math.floor(Math.random() * 255 + 1);
+        const blue = Math.floor(Math.random() * 255 + 1);
+        return red + "," + green + "," + blue;
+      };
+
+      const luz = () => {
+        const RGB = colorRGB();
+        cristal[0].style.backgroundColor = "rgb(" + RGB + ")";
+        cristal[0].style.border = "2px solid rgb (" + RGB + ")";
+        cristal[0].style.boxShadow =
+          "inset -10px -10px 20px rgba(255, 255, 255, 0.3) , 0px -20px 60px rgb(" +
+          RGB +
+          ")";
+          printcolor.value= RGB;
+      };
+
+      const cambioluz = () => {
+        if (boton.innerHTML == "Encender") {
+          boton.innerHTML = "Apagar";
+          intervalo = setInterval(luz, 500);
+        } else {
+          boton.innerHTML = "Encender";
+          clearInterval(intervalo);
+          cristal[0].style.backgroundColor = "rgb(60,60,60)";
+          cristal[0].style.border = "2px solid rgb (60,60,60)";
+          cristal[0].style.boxShadow =
+            "inset -10px -10px 20px rgba(255, 255, 255, 0.3) , 0px -20px 60px rgb(60,60,60)";
+        }
+      };
+
+      
+      
+    
+    </script>
+  </body>
+</html>
