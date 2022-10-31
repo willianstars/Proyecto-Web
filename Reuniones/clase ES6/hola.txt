@@ -1,0 +1,49 @@
+webpackjs.js.org
+babeljs.io
+
+Creacion
+- archivo package.json con un objeto vacio
+- en la terminal ejecutar "npm install --save-dev @babel/core @babel/cli @babel/preset-env"
+- creamos un "scripts" con la sintaxis 
+    "build": "build ./src -d (nombre de carpeta a eleccion)",
+- crear archivo babel.config.json y rellenar con 
+    "{
+    "presets": ["@babel/preset-env"]
+    }"
+- crear carpeta src con archivos .js e index.html
+- todos los archivos .js a exportar, al inicio de cada clase escribirles "export"
+- dentro de la carpeta src creamos un archivo llamad "app.js" alli se llamaran los demas archivos js con la etiqueta "import"
+- creamos un archivo general llamado webpack.config.js con la siguiente estructura:
+    // Invoca el modulo path de NodeJS, que se encuentra en el directorio node_modules
+    const path = require('path');
+
+    // Exportar la configuración del Módulo
+    // Webpack Funcione con Babel, debo agregar la configuración del módulo de babel y su regla
+    module.exports = {
+        entry: './src/app.js',
+        output: {
+            filename: 'bundle.js',
+            path: path.join(__dirname, 'dist'),
+        },
+        mode: "production",
+        module: {
+            rules: [
+                {
+                    test: /\.m?js$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ['@babel/preset-env']
+                        }
+                    }
+                }
+            ]
+        }
+    }; 
+
+- en el archivo package.json añadimos en el "scripts" el siguiente build:
+    "build": "webpack"
+- por ultimo en consola escribimos: npm install --save-dev babel-loader    
+
+- ya con todo eso creado podemos probar en la terminal si salta algun error con el comando npm run (nombre carpeta elegida)

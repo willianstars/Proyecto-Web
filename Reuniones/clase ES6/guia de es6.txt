@@ -1,0 +1,14 @@
+npm -v (Version del npm)
+nvm install lts
+
+en el package escribir
+    "scripts": {
+    "construir": "babel ./src -d ./compilado --watch"
+    }
+
+crear archivo general babel.config.json
+    {
+    "presets": ["@babel/preset-env"]
+    }
+
+en el terminal escribir (npm run compilado)
