@@ -315,3 +315,65 @@ un constructor no se puede agrupar con un elemento estático
 
 return se puede convertir en string
 
+MICROSERVICIOS
+
+latest: ultima version funcional
+imagenes: las imagenes son los pre requisitos para instalar un servidor
+
+para eliminar directorios: rd /q /s nombre de directorio
+
+Compose = es un orquestador, le dice al docker que leer 
+
+contenedores = proyectos
+imagenes = sistema operativo del proyecto
+volumenes = discos duros de proyectos
+
+PERSISTENCIA: 
+
+docker-compose pull
+docker-compose up -d
+docker-compose exec servicio bash
+
+ver errores = docker-compose logs nombre,de,server
+
+eliminar contenedor: docker-compose down --rmi all -v --remove-orphans
+
+* enviroment: se utiliza para pasarle propiedades al servicio
+
+
+FROM mongo:4.2
+RUN apt update
+RUN apt upgrade -y
+RUN apt install nano net-tools cron -y
+
+version: "3.2"
+
+services:
+
+  mongoserver:
+    image: mongo:4.2
+    container_name: mongoserver
+    hostname: mongo
+    restart: always
+    volumes:
+      - ./persintencias/mongodb:/data/db:rw
+    ports:
+      - "0.0.0.0:27019:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=.curso2022.
+    build:
+      context: ./
+      dockerfile: cursobuild
+
+
+BACKEND
+
+debug = depuracion
+
+ requisitos: 
+	npm i -g nodemon
+
+ dependencias: 
+	npm i express
+	npm i dontenv
