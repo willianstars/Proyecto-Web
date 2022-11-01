@@ -1,3 +1,30 @@
+
+.color_corporativo,
+a {
+    background-color: rgb(45, 135, 219);
+    color: #fff !important;
+}
+
+.titulo_tarjeta{
+    background-color: rgb(45, 135, 219);
+    color: #fff !important;
+}
+
+.transform_white {
+    filter: brightness(100);
+}
+
+.sombra_texto {
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-shadow: 0px 0px 2px #000;
+    font-weight: bold;
+}
+
+
+
+
 .btn-info{
     background-color: dodgerblue !important;
     border: 1px solid rgb(11, 93, 174) !important;
