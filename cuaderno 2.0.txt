@@ -381,17 +381,17 @@ debug = depuracion
 
 
 GUIA DE ES6
-npm -v (Version del npm)
-nvm install lts
+		npm -v (Version del npm)
+		nvm install lts
 
-en el package escribir
-    "scripts": {
-    "construir": "babel ./src -d ./compilado --watch"
-    }
+		en el package escribir
+			"scripts": {
+			"construir": "babel ./src -d ./compilado --watch"
+			}
 
-crear archivo general babel.config.json
-    {
-    "presets": ["@babel/preset-env"]
-    }
+		crear archivo general babel.config.json
+			{
+			"presets": ["@babel/preset-env"]
+			}
 
-en el terminal escribir (npm run compilado)
+		en el terminal escribir (npm run compilado)
