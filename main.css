@@ -272,9 +272,8 @@ a[href$=".co"]{
 
 .Vacio{
     text-decoration: none;
-    /*clear: both;*/
-    color: #333;
-    text-shadow: 0px 0px 5fpx #000;
+    color: #333 !important;
+    text-shadow: 0px 0px 5fpx #000 !important;
 }
 
 .posicion-1{
