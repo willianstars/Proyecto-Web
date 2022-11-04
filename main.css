@@ -270,6 +270,26 @@ a[href$=".co"]{
 }
 */
 
+.Vacio{
+    text-decoration: none;
+    /*clear: both;*/
+    color: #333;
+    text-shadow: 0px 0px 5fpx #000;
+}
+
+.posicion-1{
+    text-align: left;
+}
+.posicion-2{
+    text-align: center;
+}
+.posicion-3{
+    text-align: right;
+}
+.posicion-4{
+    text-align: justify;
+}
+
 .cuadro{
     margin: 10px ;
     border: 1px solid #333;
@@ -287,3 +307,4 @@ div[class~="bordes"]{
 div[title]{
     background-color: aqua;
 }
+
