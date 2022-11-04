@@ -395,3 +395,15 @@ GUIA DE ES6
 			}
 
 		en el terminal escribir (npm run compilado)
+
+		comandos git:
+			1- git add  . (es obligatorio para cargar los cambios que se hicieron)
+			2- git commit -m "mensaje" (se utiliza para enviar un mensaje en la actualizacion del repositorio) es obligatorio
+			3- git push (sube los cambios al repositorio)
+			git pull (actualiza el repositorio para ver si se hicieron cambios)
+
+		comandos cmd:
+			dir (muestra los directorios de la raiz)
+			cd (entrar a un directorio)
+			cd .. (salir del directorio)
+			code . (abrir VSC del directorio actual)
