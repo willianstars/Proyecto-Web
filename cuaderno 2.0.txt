@@ -407,3 +407,6 @@ GUIA DE ES6
 			cd (entrar a un directorio)
 			cd .. (salir del directorio)
 			code . (abrir VSC del directorio actual)
+
+	RUTA DE INSTALACION
+	npm i --save-dev @babel/cli @babel/core @babel/preset-env babel-loader css-loader style-loader webpack webpack-cli @fortawesome/fontawesome-free bootstrap
