@@ -14,6 +14,7 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/css/bootstrap.min.css
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="/login-Config/main.css">
     <link
       rel="stylesheet"
       href="
@@ -33,28 +34,6 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/js/bootstrap.bundle.min.j
       referrerpolicy="no-referrer"
     ></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-      * {
-        font-family: "Poppins", sans-serif;
-      }
-      .container-fluid {
-        height: 100vh;
-        margin: 0px;
-        padding: 0px;
-      }
-      .card {
-        position: relative;
-        width: 450px;
-        height: 250px;
-        margin: auto;
-        top: calc(calc(100vh / 2) - 125px);
-      }
-
-      @media screen and (max-width: 450px) {
-        .card {
-          width: 350px;
-        }
-      }
     </style>
   </head>
   <body>
@@ -89,29 +68,30 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/js/bootstrap.bundle.min.j
               />
             </div>
             <button type="button" onclick="getDate()" class="btn btn-success">
-              Enviar
+                Enviar
             </button>
           </form>
         </div>
       </div>
     </div>
     <script>
-      $(function () {});
+$(function () {});
 
-      const getDate = () => {
-        const correo = $("#correo").val();
-        const password = $("#password").val();
-        if (correo && password) {
-          // alert('Todos los campos estan bien');
-          if (correo === "ceo@firebot.co" && password === "123.abc") {
-            location.href = "main.html";
-          } else {
-            alert("Correo y Contraseña Fallida!");
-          }
-        } else {
-          alert("Ingrese todos los campos");
-        }
-      };
+const getDate = () => {
+  const correo = $("#correo").val();
+  const password = $("#password").val();
+  if (correo && password) {
+    // alert('Todos los campos estan bien');
+    if (correo === "ProyectoWeb" && password === "Curso2022") {
+            location.href = "login-Config/index.html";
+    } else {
+      alert("Correo y Contraseña Fallida!");
+    }
+  } else {
+    alert("Ingrese todos los campos");
+  }
+};
+
     </script>
   </body>
 </html>
