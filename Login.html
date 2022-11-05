@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="
+https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/css/bootstrap.min.css
+"
+      integrity="sha512-SCpMC7NhtrwHpzwKlE1l6ks0rS+GbMJJpoQw/A742VaxdGcQKqVD8F/y/m9WLOfIPppy7mWIs/kS0bKgSI0Bfw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
+"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="
+https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/js/bootstrap.bundle.min.js
+"
+      integrity="sha512-lAJppLlFlj2g7mb8jrbx34cdZcB24LLIK0N4U0rZtRPoY4oq9uiRXBbigPzGmzN5EXiDn0yMLIBjf0+E/alhXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      .container-fluid {
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+      }
+      .card {
+        position: relative;
+        width: 450px;
+        height: 250px;
+        margin: auto;
+        top: calc(calc(100vh / 2) - 125px);
+      }
+
+      @media screen and (max-width: 450px) {
+        .card {
+          width: 350px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid vw-100 bg-info">
+      <div class="card">
+        <div class="card-body">
+          <form action="/" method="post">
+            <h1>Ingreso al Sistema</h1>
+            <div class="input-group mb-2">
+              <div class="input-group-text">
+                <i class="fas fa-at fa-fw"></i>
+              </div>
+              <input
+                type="email"
+                name="correo"
+                id="correo"
+                class="form-control"
+                placeholder="Ingrese su Correo"
+                required
+              />
+            </div>
+            <div class="input-group mb-2">
+              <div class="input-group-text">
+                <i class="fas fa-unlock-keyhole fa-fw"></i>
+              </div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+                placeholder="Ingrese la Contraseña"
+              />
+            </div>
+            <button type="button" onclick="getDate()" class="btn btn-success">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {});
+
+      const getDate = () => {
+        const correo = $("#correo").val();
+        const password = $("#password").val();
+        if (correo && password) {
+          // alert('Todos los campos estan bien');
+          if (correo === "ceo@firebot.co" && password === "123.abc") {
+            location.href = "main.html";
+          } else {
+            alert("Correo y Contraseña Fallida!");
+          }
+        } else {
+          alert("Ingrese todos los campos");
+        }
+      };
+    </script>
+  </body>
+</html>
