@@ -1,3 +1,4 @@
+
 /* Clase Navbar*/
 .color_corporativo {
     background: linear-gradient(rgb(85, 5, 85), rgb(97, 0, 0));
@@ -226,12 +227,12 @@ a {
     height: 100% !important;
 }
 
-p{
+/*p{
     text-indent: 150px;
     letter-spacing: 3px;
     line-height: -2;
     word-spacing: 10px;
-}
+}*/
 
 .gradiante{
     background-image: radial-gradient( at 100% 0%,  black 50px, #fff 0px  );
