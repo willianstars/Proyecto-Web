@@ -311,8 +311,10 @@ div[title]{
     background-color: aqua;
 }
 
-.circular{
-    width:300px;
-    height:300px;
+ .logo{
+    width: 150px;
+    height: 150px;
+    background-position: center center;
+    background-size: cover;
     border-radius:150px;
- }
+}
