@@ -311,10 +311,3 @@ div[title]{
     background-color: aqua;
 }
 
- .logo{
-    width: 150px;
-    height: 150px;
-    background-position: center center;
-    background-size: cover;
-    border-radius:150px;
-}
