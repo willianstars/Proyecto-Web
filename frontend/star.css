@@ -1,3 +1,10 @@
+.color_corporativo {
+    background: linear-gradient(rgb(85, 5, 85), rgb(97, 0, 0));
+}
+a {
+    color: #fff !important;
+}
+
 .logo{
     width: 150px;
     height: 150px;
