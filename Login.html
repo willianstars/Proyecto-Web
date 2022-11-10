@@ -33,6 +33,7 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/js/bootstrap.bundle.min.j
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="./main.js"></script>
     <style>
     </style>
   </head>
@@ -74,15 +75,18 @@ https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/js/bootstrap.bundle.min.j
         </div>
       </div>
     </div>
+    
     <script>
-$(function () {});
+/*$(function () {});
+
+require(' dotenv ').config();
 
 const getDate = () => {
   const correo = $("#correo").val();
   const password = $("#password").val();
   if (correo && password) {
     // alert('Todos los campos estan bien');
-    if (correo === "ProyectoWeb" && password === "Curso2022") {
+    if (correo === "${USER}" && password === "${PASSWD}") {
             location.href = "login-Config/index.html";
     } else {
       alert("Correo y Contraseña Fallida!");
@@ -90,7 +94,7 @@ const getDate = () => {
   } else {
     alert("Ingrese todos los campos");
   }
-};
+};*/
 
     </script>
   </body>
