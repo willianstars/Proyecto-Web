@@ -418,3 +418,4 @@ clase jueves 10 de nov
 	morgan: carga los middleware
 	los callbacks leen losd detalles
 	Letsencrypt
+	%20 es un metodo de html empleado en las urls para añadir un espaciado
