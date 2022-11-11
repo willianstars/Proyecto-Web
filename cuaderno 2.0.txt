@@ -417,4 +417,4 @@ clase jueves 10 de nov
 	Nodemon: modulo global de ejecucion
 	morgan: carga los middleware
 	los callbacks leen losd detalles
-	Lets
+	Letsencrypt
