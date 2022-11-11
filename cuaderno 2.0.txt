@@ -410,3 +410,11 @@ GUIA DE ES6
 
 	RUTA DE INSTALACION
 	npm i --save-dev @babel/cli @babel/core @babel/preset-env babel-loader css-loader style-loader webpack webpack-cli @fortawesome/fontawesome-free bootstrap
+
+
+clase jueves 10 de nov
+
+	Nodemon: modulo global de ejecucion
+	morgan: carga los middleware
+	los callbacks leen losd detalles
+	Lets
