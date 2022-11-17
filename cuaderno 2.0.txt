@@ -120,8 +120,8 @@ JS: //
     	|| = (pipe) or (o) 
     	&& = and (y)
     	boolean = true (verdadero) | false (falso)
-	== es equivalente a comparar dos valores
-	=== es equivalente a comparar y a evaluar los tipos
+		== es equivalente a comparar dos valores
+		=== es equivalente a comparar y a evaluar los tipos
     	!== equivalente a una negacion o diferencia
     	> equivale a un valor mayor que
     	< equivale a un valor menor que
@@ -152,9 +152,7 @@ JS: //
 				}
 
 		TERNARIA: sirve para recortar las condicionales q tienen solo dos opciones de respuesta
-			const expresion = (grupo) => {
-      			return grupo ? "opcion 1" : "opcion 2";
-    			};
+			const expresion = (grupo) =>  return grupo ? "opcion 1" : "opcion 2";
 
 	un watcher (addEventListener) "vigilante"
 
