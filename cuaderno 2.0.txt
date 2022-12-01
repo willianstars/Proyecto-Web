@@ -418,8 +418,8 @@ clase jueves 10 de nov
 	Letsencrypt
 	%20 es un metodo de html empleado en las urls para añadir un espaciado
 
-//middlewore es una aplicación que captura y procesa la informadión que está 
-//genernado la aplicación
+//middlewore es una aplicación que captura y procesa la información que está 
+//generando la aplicación
 
 //codigo 404 cuando no encuentra la página
 //código 200 cuando la página la respondió sin problemas.
@@ -431,3 +431,5 @@ clase jueves 10 de nov
 //DELETE = eliminar
 
 //método CRUD (Create(POST), Read(GET), Update(PUT), Delete(DELETE))
+
+// 
