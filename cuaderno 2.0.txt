@@ -432,4 +432,4 @@ clase jueves 10 de nov
 
 //método CRUD (Create(POST), Read(GET), Update(PUT), Delete(DELETE))
 
-// 
+// cuando se colocan objetos en una const dentro de un (req, res), se le llama desestructurin
