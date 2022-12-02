@@ -434,4 +434,6 @@ clase jueves 10 de nov
 
 // cuando se colocan objetos en una const dentro de un (req, res), se le llama desestructurin
 
-// parseInt() metodo para convertir stringa a un entero
+// parseInt() metodo para convertir string a un entero
+
+// backend debe disponer de los datos
