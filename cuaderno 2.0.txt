@@ -437,3 +437,16 @@ clase jueves 10 de nov
 // parseInt() metodo para convertir string a un entero
 
 // backend debe disponer de los datos
+
+Base de datos:
+
+	SQL = lenguaje
+	SELECT = es una consulta
+	FROM = tablas a consultar
+	WHERE = lo que relaciona
+
+	sentencia SQL SELECT * FROM productos;
+	sentencia mongo productos.find({}, {})
+
+	- relacional(las tablas se relacionan)
+	- no relacional
