@@ -302,10 +302,6 @@ JS: //
 cuando terminamos en return es porques un elemento padre
 cuando terminamos en document.getElementById es porque es un objeto hijo
 
-
-
-
-
 map es un iterador
 los objetos dentro de un objeto se le llama métodos
 
