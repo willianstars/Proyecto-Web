@@ -447,3 +447,5 @@ Base de datos:
 
 	- relacional(las tablas se relacionan)
 	- no relacional
+
+Framworks (o algo asi se escribia): 
