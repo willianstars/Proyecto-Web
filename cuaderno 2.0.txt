@@ -449,3 +449,44 @@ Base de datos:
 	- no relacional
 
 Framworks (o algo asi se escribia): 
+
+SQL:
+	para crear tabla y evitar problemas tener en cuenta escribirlo de la siguiente manera: CREATE TABLE IF NOT EXISTS (nombre)
+-- crear tabla
+*para crear una tabla = CREATE TABLE estudiantes (
+id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nombres VARCHAR(64) NOT NULL,
+apellidos VARCHAR(128) NOT NULL,
+identidad int(11) NOT NULL
+);
+
+-- listar tablas de la base de datos
+SHOW TABLES;
+
+-- regenerar una tabla
+TRUNCATE estudiantes;
+
+-- agregar dos estudiantes
+INSERT INTO estudiantes(nombre,apellidos,identidad) VALUES
+('Dario','Martinez Duque', 1023465748),
+('Junior','Andrade Cosio', 1023435348);
+
+--consultar la tabla
+*para visualizar = SELECT * FROM estudiantes
+
+--actualizar informcaion de la tabla de estudiantes
+UPDATE estudiantes SET Identidad=1023435347 WHERE id=2;
+
+-- eliminar un registro en la tabla estudiantes
+DELETE FROM estudiantes WHERE id=1;
+
+-- consultas personalizadas
+SELEC nombres, identidad FROM estudiantes WHERE nombres='Dario';
+
+-- alterar tabla de estudiantes
+ALTER TABLE estudiantes ADD COLUMN create_data timestamp DEFAULT current_timestamp;
+
+-- alterar columna existente
+ALTER TABLE estudiantes MODIFY COLUMN apellidos VARCHAR (64);
+
+UPDATE estudiantes SET nombres='hugo', apellidos='andrade loza', identidad=12349872 WHERE id=3;
