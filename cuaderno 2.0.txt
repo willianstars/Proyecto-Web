@@ -490,3 +490,84 @@ ALTER TABLE estudiantes ADD COLUMN create_data timestamp DEFAULT current_timesta
 ALTER TABLE estudiantes MODIFY COLUMN apellidos VARCHAR (64);
 
 UPDATE estudiantes SET nombres='hugo', apellidos='andrade loza', identidad=12349872 WHERE id=3;
+
+* SQL:
+
+	3 grandes grupos
+	- tipos numericos
+	- tipos de fecha
+	- tipos de cadena
+
+	Tipos de datos numericos
+
+	 - TinyInt: entero rango de valores va desde -128 a 127, 4 digitos -> empleado con valores pequeños pero enteros
+	 - Int: entero que pudes tener o no un signo: 11 digitos - + -> empleado en valores enteros
+	 - SmallInt: entero pequeño 5 digitos -> empleado en valores enteros
+	 - MediumInt: entero en tamaño medio, 9 digitos -> empleado en valores enteros
+	 - BigInt: entergo grande, 20 digitos -> empleado en valores enteros
+
+	 - float: numeros decimales, ilimitado -> empleado en coma flotante
+	 - double: numeros decimales, ilimitado -> empleado en coma flotante con presicion
+	 - decimal: numero decimal descomprimido, ilimitado -> empleado en coma flotante, utilizado para almacenar daros de notacion cientifica
+
+	Tipos de datos de cadena
+	 - Char: almacena la cadena en la memoria, pero usa el espacio y sirve para guardar textos breves, longitud va de 1 a 255 caracteres
+	 - Varchar: va de 1 a - 255 en la version 5.3 de mysql, nuevas versiones paso a 65535 caracteres
+	 - blob: guarda informacion en lenguaje binario y se utiliza para almacenar imagenes, sonido y archivos
+	 - Tinyblob 255 bytes, blob 65535 bytes, mediumblob 16777215 bytes, longblob 4gb
+	 - text: guarda grandes cantidades de texto asi como los blobs, noticias, comentarios, publicaciones, etc.
+	 - Tinytext, tex, mediumtext, longtext
+	 - enum: tambien llamado enumeracion, utilizado para organizar arreglos de texto que el usuario debe seleccionar, condiciona los datos almacenados, 24 elementos
+	 - set: crea listas especificas pero con 64 elementos
+
+	Tipos de fecha y hora
+	 - fecha: formato (AAAA-MM-DD)
+	 - datetime: combinacion de fecha y hora (AA-MM-DD HH:MM:SS)
+	 - timestamp: parecido al datetime solo que almacena el timezone (AAAA-MM-DD HH:MM:SS -5)
+	 - time: almacena la hora en formato (HH:MM:SS)
+	 - year: almacena el año AA(23) - AAAA(2023)
+
+	crear una entidad en sql que contenga los siguientes datos:
+	 - ID llave primaria, incrementable
+	 - nombres longitud 64
+	 - apellidos longitud 28
+	 - cedula longitud 12
+	 - fotografia
+	 - fecha_nacimiento
+	 - curriculum (archivo)
+	 - breve_descripcion_personal
+	 - fecha_hora_del_registro
+	 - sexo ['hombre', 'mujer']
+	 - edad
+	 - idiomas ['español', 'ingles', 'frances']
+	CREATE TABLE IF NOT EXIST personas (
+	id int(11) PRIMARY KEY AUTO_INCREMENT,
+	nombres VARCHAR(64),
+	apellidos VARCHAR(64),
+	cedula BIGINT(12),
+	fotografia BLOB,
+	fecha_nacimiento DATE,
+	curriculum BLOB,
+	breve_dscripcion_personal VARCHAR(255),
+	fecha_hora_del_registro GETDATE,
+	sexo ENUM(hombre, mujer),
+	edad INT(2),
+	idiomas ENUM(español, ingles, frances)
+	) ENGINE=InnoDB;
+
+	0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+
+	A=C1
+	B=C2
+	C=C3
+	D=C4
+
+
+	esperando que esto este bien asi deberia quedar esto xd
+
+	e=1100-0101, s=1110-0010, p=1011-0111, e=1100-0101, r=1100-1001, a=1100-0001, n=1101-0101, 
+
+
+	Funciones y Alias
+
+	* select sum(ventas) from productos where fecha=current_timestamp();
