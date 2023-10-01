@@ -313,14 +313,14 @@ return se puede convertir en string
 MICROSERVICIOS
 
 latest: ultima version funcional
-imagenes: las imagenes son los pre requisitos para instalar un servidor
+images: las imagenes son los pre requisitos para instalar un servidor
 
 para eliminar directorios: rd /q /s nombre de directorio
 
 Compose = es un orquestador, le dice al docker que leer 
 
 contenedores = proyectos
-imagenes = sistema operativo del proyecto
+images = sistema operativo del proyecto
 volumenes = discos duros de proyectos
 
 PERSISTENCIA: 
@@ -336,46 +336,65 @@ eliminar contenedor: docker-compose down --rmi all -v --remove-orphans
 * enviroment: se utiliza para pasarle propiedades al servicio
 
 
-FROM mongo:4.2
-RUN apt update
-RUN apt upgrade -y
-RUN apt install nano net-tools cron -y
+Backend
 
-version: "3.2"
+ BD MONGO
+ 
+ * Notas:
+   - crear o cambiar de base de datos: use (name)
+   - ver base de datos: show dbs
+   - ver en que base de datos estoy: db
+   - crear una coleccion "tabla": db.createCollection("usuarios")
+   - agregar UN dato a la coleccion: db.usuarios.insertOne({"nombres: ": "willian", "apellido: ": "rubio", "email: ": "prueba@gmail.com"})
+   - agregar VARIOS datos a la coleccion: db.usuarios.insertMany([{},{},{}...])
+   - mostar todos los datos de una coleccion: db.usuarios.find({})
+   - mostrar todas las colecciones:  show collections
+ 
+  
+  crear contenedores docker de mongo
+    
+    dockerDBA
+    
+	FROM mongo:4.2
+	RUN apt update
+	RUN apt upgrade -y
+	RUN apt install nano net-tools cron -y
 
-services:
+    docker-compose.yml
+    
+	version: "3.2"
+	services:
+	  mongoserver:
+	    image: mongo:4.2
+	    container_name: mongoserver
+	    hostname: mongo
+	    restart: always
+	    volumes:
+	      - ./persintencias/mongodb:/data/db:rw
+	    ports:
+	      - "0.0.0.0:27019:27017"
+	    environment:
+	      - MONGO_INITDB_ROOT_USERNAME=root
+	      - MONGO_INITDB_ROOT_PASSWORD=.curso2022.
+	    build:
+	      context: ./
+	      dockerfile: cursobuild
 
-  mongoserver:
-    image: mongo:4.2
-    container_name: mongoserver
-    hostname: mongo
-    restart: always
-    volumes:
-      - ./persintencias/mongodb:/data/db:rw
-    ports:
-      - "0.0.0.0:27019:27017"
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=.curso2022.
-    build:
-      context: ./
-      dockerfile: cursobuild
 
+ DB MARIADB
 
-BACKEND
+	debug = depuracion
 
-debug = depuracion
-
- requisitos: 
+	requisitos: 
 	npm i -g nodemon
 
- dependencias: 
-	npm i express
-	npm i dontenv
+	dependencias: 
+		npm i express
+		npm i dontenv
 
 
 
-GUIA DE ES6
+	GUIA DE ES6
 		npm -v (Version del npm)
 		nvm install lts
 
